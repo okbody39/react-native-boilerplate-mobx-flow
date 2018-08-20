@@ -13,11 +13,11 @@ class Login extends React.Component<Props, State> {
 			<Container>
 				<Header style={{ height: 200 }}>
 					<Body style={{ alignItems: "center" }}>
-						<Icon name="flash" style={{ fontSize: 104 }} />
-						<Title>ReactNativeSeed.com</Title>
+						<Icon name="cloud" style={{ fontSize: 100 }} />
+						<Title>SeedCloud</Title>
 						<View padder>
 							<Text style={{ color: Platform.OS === "ios" ? "#000" : "#FFF" }}>
-								Build Something Amazing
+								통합 관리자 모바일 콘솔
 							</Text>
 						</View>
 					</Body>
@@ -26,18 +26,18 @@ class Login extends React.Component<Props, State> {
 					{this.props.loginForm}
 					<View padder>
 						<Button block onPress={() => this.props.onLogin()}>
-							<Text>Login</Text>
+							<Text>로그인</Text>
 						</Button>
 					</View>
 				</Content>
 				<Footer style={{ backgroundColor: "#F8F8F8" }}>
 					<View style={{ alignItems: "center", opacity: 0.5, flexDirection: "row" }}>
-						<View padder>
-							<Text style={{ color: "#000" }}>Made with love at </Text>
-						</View>
+						{/*<View padder>*/}
+							{/*<Text style={{ color: "#000" }}>Copyright © DFOCUS All Rights Reserved.</Text>*/}
+						{/*</View>*/}
 						<Image
-							source={{ uri: "https://geekyants.com/images/logo-dark.png" }}
-							style={{ width: 422 / 4, height: 86 / 4 }}
+							source={{ uri: "http://www.dfocus.net/www/img/logo.jpg" }}
+							style={{ width: 157 / 2, height: 53 / 2 }}
 						/>
 					</View>
 				</Footer>

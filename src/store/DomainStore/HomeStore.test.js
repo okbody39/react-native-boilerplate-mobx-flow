@@ -6,13 +6,27 @@ describe("HomeStore", () => {
 		const store = new HomeStore();
 		store.fetchItems(data);
 		const expectedArray = [
-			"React Native Starter Kit",
-			"React Navigation",
-			"NativeBase Easy Grid",
-			"NativeBase",
-			"CodePush",
-			"Redux",
-		];
+      {
+        "route": "Overview",
+        "caption": "Overview"
+      },
+      {
+        "route": "BlankPage",
+        "caption": "VMs"
+      },
+      {
+        "route": "BlankPage",
+        "caption": "Hosts"
+      },
+      {
+        "route": "BlankPage",
+        "caption": "Stoarages"
+      },
+      {
+        "route": "BlankPage",
+        "caption": "Networks"
+      }
+    ];
 		var actualJSON = JSON.stringify(store.items);
 		var expectedJSON = JSON.stringify(expectedArray);
 		expect(expectedJSON).toEqual(actualJSON);

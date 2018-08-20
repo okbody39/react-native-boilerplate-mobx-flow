@@ -23,7 +23,7 @@ export default class LoginContainer extends React.Component<Props, State> {
 			this.props.navigation.navigate("Drawer");
 		} else {
 			Toast.show({
-				text: "Enter Valid Email & password!",
+				text: "아이디 또는 비밀번호를 다시 확인해 주세요!",
 				duration: 2000,
 				position: "top",
 				textStyle: { textAlign: "center" },
@@ -37,7 +37,7 @@ export default class LoginContainer extends React.Component<Props, State> {
 				<Item error={form.emailError ? true : false}>
 					<Icon active name="person" />
 					<Input
-						placeholder="Email"
+						placeholder="아이디"
 						keyboardType="email-address"
 						ref={c => (this.emailInput = c)}
 						value={form.email}
@@ -48,7 +48,7 @@ export default class LoginContainer extends React.Component<Props, State> {
 				<Item error={form.passwordError ? true : false}>
 					<Icon active name="unlock" />
 					<Input
-						placeholder="Password"
+						placeholder="비밀번호"
 						ref={c => (this.pwdinput = c)}
 						value={form.password}
 						onBlur={() => form.validatePassword()}

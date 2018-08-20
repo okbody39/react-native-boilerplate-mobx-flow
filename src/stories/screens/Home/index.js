@@ -43,13 +43,13 @@ class Home extends React.Component<Props, State> {
           <List>
             {this.props.list.map((item, i) => (
               <ListItem
-                key={i}
+                key={item.route}
                 onPress={() =>
-                  this.props.navigation.navigate("BlankPage", {
+                  this.props.navigation.navigate(item.route, {
                     name: { item }
                   })}
               >
-                <Text>{item}</Text>
+                <Text>{item.caption}</Text>
               </ListItem>
             ))}
           </List>

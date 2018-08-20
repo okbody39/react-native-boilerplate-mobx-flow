@@ -6,7 +6,7 @@ export interface Props {
 	navigation: any;
 }
 export interface State {}
-class BlankPage extends React.Component<Props, State> {
+class Overview extends React.Component<Props, State> {
 	render() {
 		const param = this.props.navigation.state.params;
 		return (
@@ -19,7 +19,7 @@ class BlankPage extends React.Component<Props, State> {
 					</Left>
 
 					<Body style={{ flex: 3 }}>
-						<Title>{param ? param.name.item.caption : "Blank Page"}</Title>
+						<Title>{param ? param.name.item.caption : "Overview"}</Title>
 					</Body>
 
 					<Right />
@@ -33,4 +33,4 @@ class BlankPage extends React.Component<Props, State> {
 	}
 }
 
-export default BlankPage;
+export default Overview;
