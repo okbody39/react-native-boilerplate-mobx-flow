@@ -25,9 +25,7 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "yarn jest && flow && eslint .",
-    "jest": "node node_modules/jest/bin/jest.js",
-    "precommit": "yarn test"
+    "jest": "node node_modules/jest/bin/jest.js"
   },
   "jest": {
     "preset": "jest-expo",
@@ -43,6 +41,7 @@
     "native-base": "2.3.5",
     "react": "16.2.0",
     "react-native": "0.51.0",
+    "react-native-pure-chart": "0.0.24",
     "react-navigation": "1.0.0-beta.21"
   }
 }
