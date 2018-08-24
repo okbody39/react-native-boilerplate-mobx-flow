@@ -7,6 +7,7 @@ import Home from "./container/HomeContainer";
 import BlankPage from "./container/BlankPageContainer";
 import Sidebar from "./container/SidebarContainer";
 import Overview from "./container/OverviewContainer";
+import VMs from "./container/VMsContainer";
 
 const Drawer = DrawerNavigator(
 	{
@@ -23,6 +24,7 @@ const App = StackNavigator(
 		Login: { screen: Login },
 		BlankPage: { screen: BlankPage },
     Overview: { screen: Overview },
+    VMs: { screen: VMs },
 		Drawer: { screen: Drawer },
 	},
 	{

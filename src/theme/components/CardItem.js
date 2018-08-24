@@ -16,6 +16,7 @@ export default (variables = variable) => {
 				flex: 1,
 				marginLeft: 10,
 				alignItems: null,
+				// justifyContent: "center",
 			},
 			"NativeBase.Icon": {
 				fontSize: variables.iconFontSize,
@@ -154,8 +155,9 @@ export default (variables = variable) => {
 		},
 		".header": {
 			"NativeBase.Text": {
-				fontSize: 16,
-				fontWeight: platform === "ios" ? "500" : undefined,
+				fontSize: 13,
+        color: "#a7a7a7",
+				// fontWeight: platform === "ios" ? "500" : undefined,
 			},
 			".bordered": {
 				"NativeBase.Text": {
@@ -165,7 +167,7 @@ export default (variables = variable) => {
 				borderBottomWidth: platform === "ios" ? variables.borderWidth : null,
 			},
 			borderBottomWidth: null,
-			paddingVertical: variables.listItemPadding + 5,
+			paddingVertical: 5, // variables.listItemPadding - 5,  // + 5,
 		},
 		".footer": {
 			"NativeBase.Text": {
