@@ -5,13 +5,13 @@ import { Container, Header, Title, Content, Text, H2, Button, Icon, Left, Right,
 //   Label, LabelList } from 'recharts';
 import { scaleOrdinal, schemeCategory10 } from 'd3-scale';
 
-import {
-  LineChart,
-  BarChart,
-  PieChart,
-  ProgressChart,
-  ContributionGraph
-} from 'react-native-chart-kit';
+// import {
+//   LineChart,
+//   BarChart,
+//   PieChart,
+//   ProgressChart,
+//   ContributionGraph
+// } from 'react-native-chart-kit';
 
 import PureChart from 'react-native-pure-chart';
 import Sparkline from 'react-native-sparkline';
@@ -125,20 +125,20 @@ class Overview extends React.Component<Props, State> {
                   <CardItem>
                     {/*<Text> 123/256 </Text>*/}
                     {/*<PureChart data={sampleData2} type='pie' size={100} />*/}
-                    <PieChart
-                      data={data}
-                      width={150}
-                      height={100}
-                      chartConfig={{
-                        backgroundColor: '#ffffff',
-                        backgroundGradientFrom: '#ffffff',
-                        backgroundGradientTo: '#ffffff',
-                        color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`
-                      }}
-                      accessor="population"
-                      bgColor="#ffffff"
-                      // paddingLeft="15"
-                    />
+                    {/*<PieChart*/}
+                      {/*data={data}*/}
+                      {/*width={150}*/}
+                      {/*height={100}*/}
+                      {/*chartConfig={{*/}
+                        {/*backgroundColor: '#ffffff',*/}
+                        {/*backgroundGradientFrom: '#ffffff',*/}
+                        {/*backgroundGradientTo: '#ffffff',*/}
+                        {/*color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`*/}
+                      {/*}}*/}
+                      {/*accessor="population"*/}
+                      {/*bgColor="#ffffff"*/}
+                      {/*// paddingLeft="15"*/}
+                    {/*/>*/}
                     {/*<PieChart width={100} height={100}>*/}
                       {/*<Legend />*/}
                       {/*<Pie*/}

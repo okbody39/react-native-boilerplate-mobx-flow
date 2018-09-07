@@ -1,13 +1,55 @@
 import * as React from "react";
-import { Container, Header, Title, Content, Text, Button, Icon, Left, Right, Body, List, ListItem } from "native-base";
+import { Container, Header, Title, Content, Text, Button, Icon, Left, Right, Body, List, ListItem, H1 } from "native-base";
 import Sparkline from 'react-native-sparkline';
+import axios from 'axios';
+import OTP from 'otp-client'
 
 import styles from "./styles";
+
 export interface Props {
 	navigation: any;
 }
 export interface State {}
 class VMs extends React.Component<Props, State> {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      token: '',
+    };
+
+  }
+  componentDidMount() {
+
+    setInterval(() => {
+
+      // try {
+      //
+      //   axios.get('http://192.168.2.11:8080?token=01054171759')
+      //     .then((response) => {
+      //
+      //       let token = response.data;
+      //
+      //       this.setState({token: token});
+      //     })
+      //     .catch((error) => {
+      //       //console.error(error);
+      //       this.setState({token: '000000'});
+      //     });
+      //
+      // } catch(err) {}
+
+      // let token = base32.decode('01054171759', 'RFC4648-HEX');
+
+      const otp = new OTP('01054171759');
+      const token = otp.getToken();
+
+      this.setState({token: token});
+
+    }, 3000);
+
+  }
+
 	render() {
 		const param = this.props.navigation.state.params;
     const data2 = Array.from({ length: 20 }).map(
@@ -55,7 +97,7 @@ class VMs extends React.Component<Props, State> {
               <Text>Nathaniel Clyne</Text>
             </ListItem>
             <ListItem>
-              <Text>Dejan Lovren</Text>
+              <H1>{this.state.token}</H1>
             </ListItem>
           </List>
 				</Content>
