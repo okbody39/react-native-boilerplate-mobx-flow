@@ -1,5 +1,8 @@
 // @flow
 import * as React from "react";
+import {
+  AsyncStorage
+} from "react-native";
 import { Item, Input, Icon, Form, Toast } from "native-base";
 import { observer, inject } from "mobx-react/native";
 
@@ -16,7 +19,17 @@ export interface State {}
 export default class LoginContainer extends React.Component<Props, State> {
 	emailInput: any;
 	pwdinput: any;
-	login() {
+
+  login = async () => {
+    await AsyncStorage.setItem("userToken", "111111");
+
+    this.props.loginForm.clearStore();
+    this.props.navigation.navigate("Drawer");
+
+    return;
+  }
+
+	_login() {
 
     this.props.loginForm.clearStore();
     this.props.navigation.navigate("Drawer");
